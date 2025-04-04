@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 7: JavaScript Events</title>
-    <script src="scripts/script.js" defer></script>
-    <link rel=stylesheet href="styles/style.css"></style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 7: JavaScript Events</title>
+  <script src="scripts/script.js" defer></script>
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+  <section class="header">
+    <h1>Lab 7: JavaScript Events</h1>
+  </section>
+  
+  <section class="mouseEvent">
+    <h2>Mouse Event</h2>
+    <div id="mouseEvent">
+        <p id="message">hover button to see message</p>
+        <button type="button" id="mouseButton">MOUSE HERE</button>
+    </div>
+    </section>
+
+  <section class="keyboardEvent">
+    <div id="keyboardEvent">
+        <h2>Keyboard Event</h2>
+        <p id="keyMessage">type in box to see key</p>
+        <input type="text" maxlength="1" id="keyInput" placeholder="TYPE HERE">
+        <p id="keyCodeMessage"></p>
+    </div>
+    </section>
+
+    <section class="formEvent">
+        <div id="formEvent">
+          <h2>Form Event</h2>
+          <p id="formInstructions">submit message to save</p>
+          <form id="myForm">
+            <label for="formInput">message:</label>
+            <input type="text" id="formInput" name="message" required>
+            <input type="submit" value="Submit">
+            <p id="formOutput"></p>
+          </form>
+        </div>
+      </section>
+      
 </body>
 </html>
