@@ -11,7 +11,12 @@ button.addEventListener('mouseout', () => {
 });
 
 // KEYBOARD EVENTS
+const keyInput = document.getElementById('keyInput');
+const keyCodeMessage = document.getElementById('keyCodeMessage');
 
+keyInput.addEventListener('keydown', (event) => {
+    keyCodeMessage.textContent = `key pressed: ${event.key}`;
+});
 
 // FORM EVENTS
 

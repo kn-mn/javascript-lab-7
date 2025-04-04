@@ -6,6 +6,7 @@
   <title>Lab 7: JavaScript Events</title>
   <script src="scripts/script.js" defer></script>
   <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
   <section class="header">
@@ -15,11 +16,19 @@
   <section class="mouseEvent">
     <h2>Mouse Event</h2>
     <div id="mouseEvent">
-        <p id="message">Hover over the button to see a message.</p>
+        <p id="message">hover button to see message</p>
         <button type="button" id="mouseButton">MOUSE HERE</button>
     </div>
     </section>
 
-  <div id="keyboard-event"></div>
+  <section class="keyboardEvent">
+    <div id="keyboardEvent">
+        <h2>Keyboard Event</h2>
+        <p id="keyMessage">type in box to see key</p>
+        <input type="text" id="keyInput" placeholder="Type something...">
+        <p id="keyCodeMessage"></p>
+    </div>
+    </section>
+
 </body>
 </html>
