@@ -47,18 +47,12 @@ focusInputText.addEventListener('blur', (event) => {
 
 });
 
-// function handleFocus() {
-//     document.getElementById('focusInput').style.background = 'lightyellow';
-//   }
-
-// function handleBlur() {
-// }
-
 
 // EVENT DELEGATION
+const eventDelegationButtons = document.querySelector('.eventDelegation');
 
 function addGlobalEventListener(type, selector, callback) {
-    document.addEventListener(type, (event) => {
+    eventDelegationButtons.addEventListener(type, (event) => {
         if (event.target.matches(selector)) {
             callback(event);
         }
