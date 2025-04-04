@@ -136,12 +136,12 @@ body {
     min-height:100px;
 }
 
-#myForm p,  #firstButtonMessage, #secondButtonMessage, #thirdButtonMessage, #fourthButtonMessage, #fifthButtonMessage {
+#myForm p, .eventDelegationMessages {
     display: flex;
     justify-content: center;
 }
 
-#formOutput,  #firstButtonMessage, #secondButtonMessage, #thirdButtonMessage, #fourthButtonMessage, #fifthButtonMessage {
+#formOutput, .eventDelegationMessages {
     text-align: center;
     word-break: break-all;
 }

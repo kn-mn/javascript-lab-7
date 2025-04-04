@@ -30,7 +30,7 @@ form.addEventListener('submit', (event) => {
     
     const savedMessage = formMessageInput.value;
     localStorage.setItem('formMessage', savedMessage);
-    formMessageOutput.textContent = `"${savedMessage}" is saved in localStorage`;
+    formMessageOutput.textContent = `"${savedMessage}" saved to localStorage`;
     formMessageInput.value = '';
 });
 
@@ -56,28 +56,22 @@ focusInputText.addEventListener('blur', (event) => {
 
 
 // EVENT DELEGATION
-const buttonOne = document.getElementById('firstButton');
-const buttonTwo = document.getElementById('secondButton');
-const buttonThree = document.getElementById('thirdButton');
-const buttonFour = document.getElementById('fourthButton');
 
-const messageOne = document.getElementById('firstButtonMessage');
-const messageTwo = document.getElementById('secondButtonMessage');
-const messageThree = document.getElementById('thirdButtonMessage');
-const messageFour = document.getElementById('fourthButtonMessage');
+function addGlobalEventListener(type, selector, callback) {
+    document.addEventListener(type, (event) => {
+        if (event.target.matches(selector)) {
+            callback(event);
+        }
+    })
+}
 
-buttonOne.addEventListener('click', () => {
-    messageOne.textContent = "this";
-});
-
-buttonTwo.addEventListener('click', () => {
-    messageTwo.textContent = "is";
-});
-
-buttonThree.addEventListener('click', () => {
-    messageThree.textContent = "event";
-});
-
-buttonFour.addEventListener('click', () => {
-    messageFour.textContent = "delegation";
+addGlobalEventListener('click', '.eventDelegationButtons', (event) => {
+    const button = event.target;
+    const message = button.nextElementSibling;
+    
+    if (message.textContent.includes(button.textContent)) {
+        message.textContent = "";
+    } else {
+        message.textContent = `${button.textContent} clicked`;
+    }
 });
