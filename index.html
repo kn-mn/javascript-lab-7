@@ -17,7 +17,7 @@
     <h2>Mouse Event</h2>
     <div id="mouseEvent">
         <p id="message">hover button to see message</p>
-        <button type="button" id="mouseButton">MOUSE HERE</button>
+        <button type="button" id="mouseButton">mouse here</button>
     </div>
     </section>
 
@@ -25,7 +25,7 @@
     <div id="keyboardEvent">
         <h2>Keyboard Event</h2>
         <p id="keyMessage">type in box to see key</p>
-        <input type="text" maxlength="1" id="keyInput" placeholder="TYPE HERE">
+        <input type="text" maxlength="1" id="keyInput" placeholder="type here">
         <p id="keyCodeMessage"></p>
     </div>
     </section>
@@ -33,15 +33,40 @@
     <section class="formEvent">
         <div id="formEvent">
           <h2>Form Event</h2>
-          <p id="formInstructions">submit message to save</p>
           <form id="myForm">
-            <label for="formInput">message:</label>
+            <label for="formInstructions">submit message to save</label>
             <input type="text" id="formInput" name="message" required>
-            <input type="submit" value="Submit">
+            <input type="submit" value="submit">
             <p id="formOutput"></p>
           </form>
         </div>
       </section>
+
+      <section class="focusEvent">
+        <div id="focusEvent">
+          <h2>Focus Event</h2>
+          <input type="text" id="focusInput" placeholder="click to change cor" background-color='blue';>
+          <p id="blurMessage"></p>
+        </div>
+      </section>
+
+
+      <section class="eventDelegation">
+        <div id="eventDelegation">
+        <h2>Event Delegation</h2>
+            <button type="button" class="eventDelegationButtons">first</button>
+            <p class="eventDelegationMessages"></p>
+    
+            <button type="button" class="eventDelegationButtons">second</button>
+            <p class="eventDelegationMessages"></p>
+          
+            <button type="button" class="eventDelegationButtons">third</button>
+            <p class="eventDelegationMessages"></p>
+          
+            <button type="button" class="eventDelegationButtons">fourth</button>
+            <p class="eventDelegationMessages"></p>
+        </div>
+    </section>
       
 </body>
 </html>
