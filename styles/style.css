@@ -21,7 +21,7 @@ body {
     padding: 20px;
   }
   
-.mouseEvent {
+.mouseEvent, .keyboardEvent, .formEvent, .focusEvent, .eventDelegation {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,13 +32,13 @@ body {
 
 }
 
-#mouseEvent {
+#mouseEvent, #keyboardEvent, #formEvent, #focusEvent, #eventDelegation {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-  #mouseButton {
+  #mouseButton, .eventDelegationButtons {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -47,13 +47,15 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    margin: 5px;
 }
 
-#mouseButton:hover {
+#mouseButton:hover, .eventDelegationButtons:hover {
     background-color: var(--button-hover-color);
 }
 
-.keyboardEvent {
+/* .keyboardEvent {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,15 +63,15 @@ body {
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
-}
+} */
 
-#keyboardEvent {
+/* #keyboardEvent {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
-.formEvent {
+/* .formEvent {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,12 +79,22 @@ body {
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
-}
+} */
 
-#formEvent {
+/* #formEvent {
     display: flex;
     flex-direction: column;
     align-items: center;
+} */
+
+#keyInput {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 200px;
+    text-align: center;
 }
 
 #myForm {
@@ -112,7 +124,7 @@ body {
 #myForm input[type="submit"]:hover {
     background-color: var(--button-hover-color)
 }
-#formOutput {
+#formOutput, .eventDelegationMessages {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,12 +136,22 @@ body {
     min-height:100px;
 }
 
-#myForm p{
+#myForm p,  #firstButtonMessage, #secondButtonMessage, #thirdButtonMessage, #fourthButtonMessage, #fifthButtonMessage {
     display: flex;
     justify-content: center;
 }
 
-#formOutput{
+#formOutput,  #firstButtonMessage, #secondButtonMessage, #thirdButtonMessage, #fourthButtonMessage, #fifthButtonMessage {
     text-align: center;
     word-break: break-all;
+}
+
+#focusInput {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 200px;
+    text-align: center;
 }

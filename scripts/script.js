@@ -1,4 +1,4 @@
-// MOUSE EVENTS
+// MOUSE EVENT
 const button = document.getElementById('mouseButton');
 const message = document.getElementById('message');
 
@@ -10,7 +10,7 @@ button.addEventListener('mouseout', () => {
     message.textContent = "over";
 });
 
-// KEYBOARD EVENTS
+// KEYBOARD EVENT
 const keyInput = document.getElementById('keyInput');
 const keyCodeMessage = document.getElementById('keyCodeMessage');
 
@@ -20,7 +20,7 @@ keyInput.addEventListener('keydown', (event) => {
     keyCodeMessage.textContent = `key pressed: ${event.key}`;
 });
 
-// FORM EVENTS
+// FORM EVENT
 const form = document.getElementById('myForm');
 const formMessageInput = document.getElementById('formInput');
 const formMessageOutput = document.getElementById('formOutput');
@@ -34,7 +34,50 @@ form.addEventListener('submit', (event) => {
     formMessageInput.value = '';
 });
 
-// FOCUS AND BLUR EVENTS
+// FOCUS AND BLUR EVENT
+const focusInputText = document.querySelector('#focusInput[type="text"]');
+const blurMessage = document.getElementById('blurMessage');
+
+focusInputText.addEventListener('focus', (event) => {
+    event.target.style.background = 'lightyellow';
+});
+ 
+focusInputText.addEventListener('blur', (event) => {
+    event.target.style.background = 'pink';
+
+});
+
+// function handleFocus() {
+//     document.getElementById('focusInput').style.background = 'lightyellow';
+//   }
+
+// function handleBlur() {
+// }
 
 
 // EVENT DELEGATION
+const buttonOne = document.getElementById('firstButton');
+const buttonTwo = document.getElementById('secondButton');
+const buttonThree = document.getElementById('thirdButton');
+const buttonFour = document.getElementById('fourthButton');
+
+const messageOne = document.getElementById('firstButtonMessage');
+const messageTwo = document.getElementById('secondButtonMessage');
+const messageThree = document.getElementById('thirdButtonMessage');
+const messageFour = document.getElementById('fourthButtonMessage');
+
+buttonOne.addEventListener('click', () => {
+    messageOne.textContent = "this";
+});
+
+buttonTwo.addEventListener('click', () => {
+    messageTwo.textContent = "is";
+});
+
+buttonThree.addEventListener('click', () => {
+    messageThree.textContent = "event";
+});
+
+buttonFour.addEventListener('click', () => {
+    messageFour.textContent = "delegation";
+});
