@@ -1,3 +1,8 @@
+:root{
+    --button-color:#28345a;
+    --button-hover-color:#4f74be;
+}
+
 body {
     background: #FAF9F6;
     font-family: 'Montserrat', sans-serif;
@@ -37,7 +42,7 @@ body {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #007BFF;
+    background-color: var(--button-color);
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -45,7 +50,7 @@ body {
 }
 
 #mouseButton:hover {
-    background-color: #0056b3;
+    background-color: var(--button-hover-color);
 }
 
 .keyboardEvent {
@@ -62,4 +67,69 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.formEvent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#formEvent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#myForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#myForm input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+#myForm input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#myForm input[type="submit"]:hover {
+    background-color: var(--button-hover-color)
+}
+#formOutput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    min-height:100px;
+}
+
+#myForm p{
+    display: flex;
+    justify-content: center;
+}
+
+#formOutput{
+    text-align: center;
+    word-break: break-all;
 }
